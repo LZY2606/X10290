@@ -1,0 +1,52 @@
+{
+  "title": "寄存器轨迹室：Modbus 请求配对、地址模型与设备代次",
+  "narrative": [
+    "工业协议小组导入 Modbus TCP(line-A) 与 RTU(rs485-1) 轨迹、设备映射版本与串口事件",
+    "先核对原 ADU/方向/xid/unit/CRC/功能码/地址基准/映射版本均保留",
+    "再触发 xid 复用、RTU 重传、广播、异常码、地址基准切换、字节字序、连接重开",
+    "第二分支检验 TCP xid 与 RTU 静默间隔两套配对规则"
+  ],
+  "files": [
+    "traces/line-a.tcp.jsonl",
+    "traces/rs485-1.rtu.jsonl",
+    "mappings/device-map-v1.json",
+    "mappings/device-map-v2.json"
+  ],
+  "archive": [
+    {
+      "id": "xid_reuse",
+      "label": "transaction id 复用",
+      "expect": "在途复用产生全部合法候选，不静默配对；完成后复用仍唯一配对"
+    },
+    {
+      "id": "rtu_retransmit",
+      "label": "RTU 重传",
+      "expect": "静默窗口内重传共享首个响应，超出窗口成为独立超时/新事务"
+    },
+    {
+      "id": "broadcast",
+      "label": "广播",
+      "expect": "unit=0 写请求不期待响应，出现的应答记为非法"
+    },
+    {
+      "id": "exception_code",
+      "label": "异常码",
+      "expect": "异常响应是配对成功的失败，不产生寄存器值，不当成空数据成功"
+    },
+    {
+      "id": "address_base",
+      "label": "地址基准切换",
+      "expect": "只改变展示层一基/零基表示，派生匹配身份不变"
+    },
+    {
+      "id": "word_order",
+      "label": "字节字序组合",
+      "expect": "仅依赖该 32 位条目的派生值改变，其它对象身份不变"
+    },
+    {
+      "id": "conn_reopen",
+      "label": "连接重开",
+      "expect": "重开后按新代次隔离，xid 重新计数不与上代次匹配"
+    }
+  ]
+}

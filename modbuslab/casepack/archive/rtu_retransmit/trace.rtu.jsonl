@@ -1,0 +1,8 @@
+{"kind": "serial", "action": "bus_acquire", "t_ms": -5, "channel": "ce-bus", "detail": {"baud": 19200}}
+{"kind": "frame", "transport": "rtu", "dir": "out", "t_ms": 60.0, "channel": "ce-bus", "adu": "040300000001845f", "note": "改动后：超出静默窗口，成为独立请求并超时"}
+{"kind": "frame", "transport": "rtu", "dir": "out", "t_ms": 1.0, "channel": "ce-bus", "adu": "040300000001845f", "note": "窗口内重传"}
+{"kind": "frame", "transport": "rtu", "dir": "in", "t_ms": 2.0, "channel": "ce-bus", "adu": "04030200447477"}
+{"kind": "frame", "transport": "rtu", "dir": "out", "t_ms": 40, "channel": "ce-bus", "adu": "00060000ff00c9eb", "note": "广播写"}
+{"kind": "frame", "transport": "rtu", "dir": "in", "t_ms": 41.2, "channel": "ce-bus", "adu": "000600130001b81e", "note": "非法广播应答"}
+{"kind": "frame", "transport": "rtu", "dir": "out", "t_ms": 80, "channel": "ce-bus", "adu": "040303840001c432", "note": "异常请求"}
+{"kind": "frame", "transport": "rtu", "dir": "in", "t_ms": 82, "channel": "ce-bus", "adu": "048302d0f0"}

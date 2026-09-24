@@ -1,0 +1,18 @@
+{"kind": "connection", "action": "open", "t_ms": -5, "channel": "line-A"}
+{"kind": "frame", "transport": "tcp", "dir": "out", "t_ms": 0, "channel": "line-A", "adu": "006400000006110300090006", "note": "主叙事#1 正常读"}
+{"kind": "frame", "transport": "tcp", "dir": "in", "t_ms": 12, "channel": "line-A", "adu": "00640000000d11030a00e141c80000006300c8"}
+{"kind": "frame", "transport": "tcp", "dir": "out", "t_ms": 40, "channel": "line-A", "adu": "006500000006110307d00004", "note": "触发异常码"}
+{"kind": "frame", "transport": "tcp", "dir": "in", "t_ms": 49, "channel": "line-A", "adu": "006500000003118302"}
+{"kind": "frame", "transport": "tcp", "dir": "out", "t_ms": 90, "channel": "line-A", "adu": "0066000000061106000900e2"}
+{"kind": "frame", "transport": "tcp", "dir": "in", "t_ms": 98, "channel": "line-A", "adu": "0066000000061106000900e2"}
+{"kind": "frame", "transport": "tcp", "dir": "out", "t_ms": 130, "channel": "line-A", "adu": "006600000006110300090002", "note": "事务完成后复用 xid=102：合法"}
+{"kind": "frame", "transport": "tcp", "dir": "in", "t_ms": 137, "channel": "line-A", "adu": "00660000000711030400e30001"}
+{"kind": "frame", "transport": "tcp", "dir": "out", "t_ms": 180, "channel": "line-A", "adu": "006700000006110300090001", "note": "xid 在途复用候选 A"}
+{"kind": "frame", "transport": "tcp", "dir": "out", "t_ms": 182, "channel": "line-A", "adu": "0067000000061103000b0001", "note": "xid 在途复用候选 B"}
+{"kind": "frame", "transport": "tcp", "dir": "in", "t_ms": 200, "channel": "line-A", "adu": "00670000000511030200e4", "note": "无法唯一配对，保留两个合法候选"}
+{"kind": "frame", "transport": "tcp", "dir": "in", "t_ms": 230, "channel": "line-A", "adu": "03e7000000051803020001", "note": "unit 不符且无待处理事务"}
+{"kind": "frame", "transport": "tcp", "dir": "out", "t_ms": 260, "channel": "line-A", "adu": "006800000006000600090100", "note": "TCP 广播，无响应"}
+{"kind": "connection", "action": "close", "t_ms": 300, "channel": "line-A"}
+{"kind": "connection", "action": "open", "t_ms": 320, "channel": "line-A"}
+{"kind": "frame", "transport": "tcp", "dir": "out", "t_ms": 330, "channel": "line-A", "adu": "006400000006110300090001", "note": "重连后 xid 复用，按新代次配对"}
+{"kind": "frame", "transport": "tcp", "dir": "in", "t_ms": 338, "channel": "line-A", "adu": "00640000000511030200e5"}

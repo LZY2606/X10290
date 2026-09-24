@@ -1,0 +1,35 @@
+{
+  "version": "ce-map-v1",
+  "address_base": 0,
+  "unit_note": "反例基线映射（零基）；ce_rpm 为 32 位转速 rpm",
+  "entries": [
+    {
+      "name": "ce_rpm",
+      "space": 3,
+      "address": 0,
+      "dtype": "f32",
+      "word_order": "big",
+      "unit": "rpm",
+      "valid_min": 0,
+      "valid_max": 100
+    },
+    {
+      "name": "ce_r2",
+      "space": 3,
+      "address": 2,
+      "dtype": "u16",
+      "unit": "-",
+      "valid_min": 0,
+      "valid_max": 60000
+    },
+    {
+      "name": "ce_r3",
+      "space": 3,
+      "address": 3,
+      "dtype": "u16",
+      "unit": "-",
+      "valid_min": 0,
+      "valid_max": 60000
+    }
+  ]
+}

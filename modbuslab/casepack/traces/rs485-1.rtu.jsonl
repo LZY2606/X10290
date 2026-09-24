@@ -1,0 +1,16 @@
+{"kind": "serial", "action": "bus_acquire", "t_ms": -5, "channel": "rs485-1", "detail": {"baud": 19200, "databits": 8, "parity": "none", "stopbits": 1}}
+{"kind": "frame", "transport": "rtu", "dir": "out", "t_ms": 0, "channel": "rs485-1", "adu": "030300130001742d", "note": "RTU 首请求"}
+{"kind": "frame", "transport": "rtu", "dir": "out", "t_ms": 1.0, "channel": "rs485-1", "adu": "030300130001742d", "note": "静默窗口内重传"}
+{"kind": "frame", "transport": "rtu", "dir": "in", "t_ms": 2.0, "channel": "rs485-1", "adu": "030302007b81a7"}
+{"kind": "frame", "transport": "rtu", "dir": "out", "t_ms": 30, "channel": "rs485-1", "adu": "000600130001b81e", "note": "RTU 广播写，无响应"}
+{"kind": "frame", "transport": "rtu", "dir": "in", "t_ms": 31.2, "channel": "rs485-1", "adu": "000600130001b81e", "note": "非法广播应答"}
+{"kind": "frame", "transport": "rtu", "dir": "out", "t_ms": 70, "channel": "rs485-1", "adu": "030301f4000285e7", "note": "触发非法数据值"}
+{"kind": "frame", "transport": "rtu", "dir": "in", "t_ms": 72.0, "channel": "rs485-1", "adu": "038303a0f1"}
+{"kind": "frame", "transport": "rtu", "dir": "out", "t_ms": 120, "channel": "rs485-1", "adu": "050400000002704f", "note": "设备掉线，超时"}
+{"kind": "serial", "action": "bus_release", "t_ms": 260, "channel": "rs485-1"}
+{"kind": "serial", "action": "bus_acquire", "t_ms": 300, "channel": "rs485-1", "detail": {"reason": "\u91cd\u5f00\u603b\u7ebf"}}
+{"kind": "frame", "transport": "rtu", "dir": "out", "t_ms": 310, "channel": "rs485-1", "adu": "030300130001742d"}
+{"kind": "frame", "transport": "rtu", "dir": "in", "t_ms": 312, "channel": "rs485-1", "adu": "030302007cc065"}
+{"kind": "frame", "transport": "rtu", "dir": "out", "t_ms": 350, "channel": "rs485-1", "adu": "030300140001c5ec"}
+{"kind": "frame", "transport": "rtu", "dir": "in", "t_ms": 352, "channel": "rs485-1", "adu": "0303020001ff44", "note": "CRC 损坏"}
+{"kind": "frame", "transport": "rtu", "dir": "in", "t_ms": 400, "channel": "rs485-1", "adu": "0803020002e584", "note": "孤立响应"}

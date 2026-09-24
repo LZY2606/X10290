@@ -1,0 +1,10 @@
+{"kind": "connection", "action": "open", "t_ms": -5, "channel": "ce-line"}
+{"kind": "frame", "transport": "tcp", "dir": "out", "t_ms": 0, "channel": "ce-line", "adu": "03ea00000006020300000002", "note": "基线 首读 f32"}
+{"kind": "frame", "transport": "tcp", "dir": "in", "t_ms": 10, "channel": "ce-line", "adu": "03ea0000000702030441c80000"}
+{"kind": "frame", "transport": "tcp", "dir": "out", "t_ms": 30, "channel": "ce-line", "adu": "03eb00000006020300000001", "note": "在途复用候选 A"}
+{"kind": "frame", "transport": "tcp", "dir": "out", "t_ms": 31, "channel": "ce-line", "adu": "03eb00000006020300010001", "note": "在途复用候选 B"}
+{"kind": "frame", "transport": "tcp", "dir": "in", "t_ms": 42, "channel": "ce-line", "adu": "03eb000000050203020022", "note": "基线 无法唯一配对，保留两个合法候选"}
+{"kind": "connection", "action": "close", "t_ms": 80, "channel": "ce-line"}
+{"kind": "connection", "action": "open", "t_ms": 90, "channel": "ce-line"}
+{"kind": "frame", "transport": "tcp", "dir": "out", "t_ms": 95, "channel": "ce-line", "adu": "03ea00000006020300000001", "note": "重连后复用 1002"}
+{"kind": "frame", "transport": "tcp", "dir": "in", "t_ms": 103, "channel": "ce-line", "adu": "03ea000000050203020033"}
